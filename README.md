@@ -1,1 +1,1 @@
-# Final project of "Certificação Bootstrap" course.
+# Final project of the course "Certificação Bootstrap".
