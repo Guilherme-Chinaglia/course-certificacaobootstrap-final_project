@@ -19,6 +19,5 @@ To improve my skills i decided to code and implement the charts of the dashboard
 	
 1. git clone
 2. npm install (to install the node_modules path)
-3. bower install (to install bower)
-4. Inside the archive (gulpfile.js), you have to change the line 133, putting the path where you had save the project in your machine
-5. run the command  gulp in your terminal/cmd
+3. bower install (to download the dependencies of the project - Bootstrap v4.0.0-alpha.6, font-awesome and chart.js)
+4. run the command  gulp in your terminal/cmd
