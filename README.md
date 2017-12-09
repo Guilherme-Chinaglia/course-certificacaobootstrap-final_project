@@ -1,5 +1,24 @@
 # Final project of the course "Certificação Bootstrap".
+## ministered by <a href="https://github.com/kevenjesus">Keven Jesus</a>
 
-This is the last active of the course "Certificação Bootstrap". It's a course about the framework bootstrap. The purpose of this active was build a responsive dashboard, only seeing an design image.
+This is the last activity of the "Bootstrap Certification" course. It's a course about the bootstrap framework. The purpose of this activity was to build a responsive dashboard, only seeing an image design.
 
 To improve my skills i decided to code and implement the charts of the dashboard, instead of put images on it.
+
+## Program Languages, Frameworks and Libs
+
+* HTML 5
+* CSS 3
+* jQuery
+* SASS
+* Bootstrap v4.0.0-alpha.6
+* Chart.js
+	
+### Follow this steps and run the commands bellow in your terminal (Linux) or cmd (Windows):
+<p>It's necessary to have node.js in your machine: <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
+	
+1. git clone
+2. npm install (to install the node_modules path)
+3. bower install (to install bower)
+4. Inside the archive (gulpfile.js), you have to change the line 133, putting the path where you had save the project in your machine
+5. run the command  gulp in your terminal/cmd
