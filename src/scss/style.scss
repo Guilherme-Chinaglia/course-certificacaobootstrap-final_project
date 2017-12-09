@@ -1,0 +1,211 @@
+@import "../components/bootstrap/scss/bootstrap";
+@import "../components/font-awesome/scss/font-awesome";
+
+//Font Oswald
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,400');
+
+//Variaveis Personalizadas
+@import "_custom-variables";
+
+//Placeholders
+@import "_custom-placeholders";
+
+//Custom-mixins
+@import "_custom-mixins";
+
+//Custom-body
+@import "_custom-body";
+
+//Sidebar
+@import "_sidebar-nav";
+
+//Header
+@import "_header";
+
+//Wrapper
+.wrapper{
+	
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+
+	background-color: $corprincipal;
+}
+
+//Container
+.container{
+
+	width: 100%;
+
+	@include displacement;
+	@extend %animate-transition;
+
+	@include media-breakpoint-up(lg) {
+
+		padding: 0 2rem;
+
+		@include media-breakpoint-up(xl) {
+
+			@include displacement(5%);
+			width: 90%;
+			padding: 0;
+		}
+	}
+
+	.row{
+		
+		margin: 0;
+		justify-content: center;
+
+		@include media-breakpoint-up(md) {
+
+				justify-content: space-between;
+			}
+
+		.card-header{
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			background-color: #fff;
+			border: none;
+		}
+
+		.card-block{
+
+			position: relative;
+			margin: auto;
+			height: 70vh;
+			width: 90vw;
+			max-width: 100%;
+			display: flex;
+			align-items: center;
+
+			@include media-breakpoint-down(sm) {
+
+				height: auto;
+			}
+
+			@include media-breakpoint-up(md) {
+
+				width: 45vw;
+				height: 35vh;
+			}
+
+
+		}
+
+		.btn-filter{
+
+			color: #c4c4c4;
+			font-weight: 100;
+			padding: .3rem .3rem;		
+		}
+	}
+
+	.visitors-col{
+	
+		@extend %card-col-margin;
+
+		@include media-breakpoint-up(md) {
+
+			@include make-col(6);
+			@include make-gutters;
+		}
+
+	}
+
+	.subscriptions-col{
+
+		@extend %card-col-margin;
+
+			@include media-breakpoint-up(md) {
+
+			@include make-col(6);
+			@include make-gutters;
+		}
+	}
+
+	.messages-col{
+		
+		@extend %card-col-margin;
+
+			@include media-breakpoint-up(md) {
+
+			@include make-col(6);
+			@include make-gutters;
+		}
+	}
+
+	.overview-col{
+		
+		@extend %card-col-margin;
+
+			@include media-breakpoint-up(md) {
+
+			@include make-col(6);
+			@include make-gutters;
+		}
+	}
+
+	h2{
+	
+		text-transform:  capitalize;
+	}
+	
+	.list-msg{
+
+		ul{
+
+			margin: 1rem 0;
+			list-style-type: none;
+
+			.user-msg{
+
+				border-left: 1px solid #c4c4c4;
+				padding-left: 1.2em;
+				font-size: 1rem;
+
+				&.last-p{
+
+					border: none;
+				}
+			}
+		}
+
+		.titulo-msg{
+
+			display: flex;
+			position: relative;
+
+			.circle-msg{
+				
+				position: absolute;
+				left: -12px;
+
+				display: inline-block;	
+
+				width: 25px;
+				height: 25px;
+				margin-right: 0.2em;
+
+				@extend %border-radius;
+
+				background-color: #c4c4c4;
+			}
+			
+			h3{
+
+				font-size: 1.2rem;
+				padding: 0 1.2em;
+			}
+			
+			.fa{
+				
+				color: #c4c4c4;
+			}
+		}
+	}
+}

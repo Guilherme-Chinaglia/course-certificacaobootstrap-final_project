@@ -1,0 +1,237 @@
+//Sidebar
+.sidebar{
+
+	width: 50%;
+	max-width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+
+	@include displacement(-100%);
+
+	background-color: $corbarralateral;
+
+	@include media-breakpoint-up(xl) {
+
+		@include displacement(0);
+		width: 10%;
+	}
+}
+
+.show-menu{
+
+	.sidebar{
+
+		@include displacement;
+		@extend %animate-transition;
+
+		z-index: 1000;
+
+		@include media-breakpoint-up(md) {
+
+			width: 25%;
+		}
+
+		@include media-breakpoint-up(lg) {
+
+			width: 18%;
+		}
+	}
+
+	.container{
+	
+		@include displacement(50%);
+
+		@include media-breakpoint-up(md) {
+
+			@include displacement(25%);
+		}
+
+		@include media-breakpoint-up(lg) {
+
+			@include displacement(22%);
+		}
+	}
+
+	&:after{
+			
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 999;
+
+			background-color: rgba(0,0,0,.4);
+		}
+}
+
+.logo{
+
+	text-align: center;
+	padding: .38em;
+
+	background-color: $corfundologo;
+}
+
+//nav
+.nav{
+	
+	display: flex;
+	flex-direction: column;
+
+	list-style-type: none;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+
+	.nav-dashboard{
+
+		padding: 8px 0;
+		border-bottom: 1px solid $corfundologo;
+		border-left: 2px solid $corbordadashboard;
+		position: relative;
+
+		.fa-caret-left{
+
+			display: none;
+		}
+
+		&:hover{
+
+			background-color: lighten($corfundologo, 10);
+
+			.fa-caret-left{
+
+				display: block;
+				position: absolute;
+				top: 40%;
+				right: 0;
+				font-size: 1.5rem;
+			}	
+		}
+	}
+
+	.nav-messages{
+
+		padding: 8px 0;
+		border-bottom: 1px solid $corfundologo;
+		border-left: 2px solid $corbordamessages;
+		position: relative;
+
+		.fa-caret-left{
+		
+			display: none;
+		}
+
+		.circ-msg{
+
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			left: 40px;
+			top: 10px;
+			
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			border-radius: 50%;
+			color: #fff;
+			background-color: $red;
+		}
+		
+		&:hover{
+
+			background-color: lighten($corfundologo, 10);
+
+			.fa-caret-left{
+
+				display: block;
+				position: absolute;
+				top: 40%;
+				right: 0;
+				font-size: 1.5rem;
+			}	
+		}
+	}
+
+	.nav-analytics{
+
+		padding: 8px 0;
+		border-bottom: 1px solid $corfundologo;
+		border-left: 2px solid $corbordaanalytics;
+		position: relative;
+
+		.fa-caret-left{
+		
+			display: none;
+		}
+
+		&:hover{
+	
+			background-color: lighten($corfundologo, 10);
+
+			.fa-caret-left{
+
+				display: block;
+				position: absolute;
+				top: 40%;
+				right: 0;
+				font-size: 1.5rem;
+			}	
+		}
+	}
+
+	.nav-settings{
+
+		padding: 8px 0;
+		border-bottom: 1px solid $corfundologo;
+		border-left: 2px solid $corbordasettings;
+		position: relative;
+
+		.fa-caret-left{
+
+			display: none;
+		}
+
+		&:hover{
+
+			background-color: lighten($corfundologo, 10);
+
+			.fa-caret-left{
+
+				display: block;
+				position: absolute;
+				top: 40%;
+				right: 0;
+				font-size: 1.5rem;
+			}	
+		}
+	}
+
+	.nav-link{
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-decoration: none;
+		font-size: 1.2rem;
+
+		color: $cortxtmessages;
+
+		.fa{
+			
+			font-size: 2.8em;
+		}
+
+		&:hover{
+
+			color: $corprincipal;
+		}
+	}
+}

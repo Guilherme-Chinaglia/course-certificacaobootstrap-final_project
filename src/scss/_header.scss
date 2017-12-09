@@ -1,0 +1,95 @@
+//Header
+.header{
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1.5rem 0;
+	
+	color: #fff;
+	background-color: $cormenutopo;
+
+	@include media-breakpoint-up(xl) {
+			
+			justify-content: flex-end;
+
+			.menu{
+
+				display: none;
+			}
+		}
+
+	.menu-hamburguer{
+
+		font-size: 1.5rem;
+	}
+	.user{
+
+		display: flex;
+		align-items: center;
+
+		.circle-login{
+			
+			display: inline-block;	
+
+			width: 25px;
+			height: 25px;
+			margin-right: 0.2rem;
+
+			@extend %border-radius;
+
+			background-color: $corcirclelogin;
+		}
+
+		.user-seta{
+			margin-left: 0.2rem;
+		}
+	}
+
+	.support{
+		.support-link{
+
+			text-decoration: none;
+			color: #fff;
+
+			&:hover{
+
+				text-decoration: underline;
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+			
+			margin-right: 1.5rem;
+		}
+	}
+	.user-link{
+		
+		text-decoration: none;
+		color: #fff;
+
+		&:hover{
+
+			text-decoration: underline;
+		}
+	}
+
+	.sign{
+
+		.sign-link{
+
+			text-decoration: none;
+			color: #fff;
+
+			&:hover{
+
+				text-decoration: underline;
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+			
+			margin: 0 1rem;
+		}
+	}
+}
