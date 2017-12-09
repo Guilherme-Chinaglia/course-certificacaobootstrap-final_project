@@ -10,7 +10,7 @@ To improve my skills i decided to code and implement the charts of the dashboard
 * HTML 5
 * CSS 3
 * jQuery
-* SASS
+* Sass (preprocessor)
 * Bootstrap v4.0.0-alpha.6
 * Chart.js
 	
